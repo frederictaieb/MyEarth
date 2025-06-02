@@ -4,6 +4,7 @@ import { useFrame } from '@react-three/fiber'
 
 export default function Atmosphere(props:any) {
     const radius = props.radius;
+    
     const ref = useRef<THREE.Mesh>(null);
 
     useFrame(() => {
@@ -11,6 +12,8 @@ export default function Atmosphere(props:any) {
           ref.current.rotation.y += 0.0002;
         }
       });
+
+      
 
     return (
         <mesh ref={ref}>
